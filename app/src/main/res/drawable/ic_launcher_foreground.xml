@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Circle for Logo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,22 A32,32 0 1,1 54,86 A32,32 0 1,1 54,22 Z" />
+
+    <!-- Stylized 'M' as a Line Graph -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#004D40"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M35,62 L44,42 L54,58 L64,35 L73,55" />
+
+    <!-- Small Dollar Sign to emphasize Finance -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#004D40"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M54,68 V84 M48,72 C48,68 60,68 60,72 C60,76 48,76 48,80 C48,84 60,84 60,80" />
+
+</vector>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Financial Tracker"
+            android:textColor="#4F46E5"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard Summary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#121212"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeWidth="3dp"
+            app:strokeColor="#000000"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:text="PERBANDINGAN ARUS KAS" android:textStyle="bold" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <View android:id="@+id/viewBarChart" android:layout_width="match_parent" android:layout_height="180dp" android:background="#E0E0E0"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeWidth="3dp"
+            app:strokeColor="#000000"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:text="TABUNGAN (DEFENSE RATIO)" android:textStyle="bold" android:layout_marginBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <ProgressBar
+                    android:id="@+id/pbSavingsRatio"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:progress="26"
+                    android:progressDrawable="@android:drawable/progress_horizontal" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="METRIK KUNCI"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#9575CD"
+                app:strokeWidth="3dp"
+                app:strokeColor="#000000"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Volume Data"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTotalTransactions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="#BA68C8"
+                app:strokeWidth="3dp"
+                app:strokeColor="#000000"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rata-rata Keluar"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAvgExpense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:text="Rp 346.837.777"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+    </LinearLayout>
+</ScrollView>

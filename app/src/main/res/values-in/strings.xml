@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Pelacak Keuangan</string>
+    <string name="welcome_back">Selamat Datang Kembali</string>
+    <string name="login">Masuk</string>
+    <string name="email">Alamat Surel</string>
+    <string name="password">Kata Sandi</string>
+
+    <string name="label_total_balance">Total Saldo</string>
+    <string name="label_income">Pemasukan</string>
+    <string name="label_expense">Pengeluaran</string>
+    <string name="label_recent_transactions">Transaksi Terakhir</string>
+    <string name="action_see_all">Lihat Semua</string>
+    <string name="action_transfer">Transfer</string>
+    <string name="label_history">Riwayat</string>
+
+    <string name="title_register">Daftar Akun</string>
+    <string name="hint_security_pin">6-Digit PIN Keamanan</string>
+    <string name="btn_register_now">Daftar Sekarang</string>
+    <string name="text_already_have_account">Sudah punya akun? Masuk</string>
+
+    <string name="title_daftar_akun">DAFTAR AKUN</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_daftar_sekarang">DAFTAR SEKARANG</string>
+    <string name="teks_sudah_punya_akun">Sudah punya akun? Masuk</string>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Financial Tracker"
+            android:textColor="#4F46E5"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PENGATURAN AKUN"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#121212"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeWidth="3dp"
+            app:strokeColor="#000000"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvInitial"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:text="I"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PROFIL SAAT INI"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Iyan9"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#121212"/>
+
+                    <TextView
+                        android:id="@+id/tvUserEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="alfian25@test.com"
+                        android:textSize="14sp"
+                        android:textColor="#121212"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:strokeWidth="3dp"
+            app:strokeColor="#000000"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EKSPOR LAPORAN"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button android:id="@+id/btnExportCsv" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:text="Unduh CSV" android:backgroundTint="#4CAF50" android:layout_marginEnd="8dp"/>
+                    <Button android:id="@+id/btnExportPdf" android:layout_width="0dp" android:layout_weight="1" android:layout_height="50dp" android:text="Unduh PDF" android:backgroundTint="#F44336" android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button android:id="@+id/btnChangePin" android:layout_width="match_parent" android:layout_height="56dp" android:text="GANTI PIN KEAMANAN" android:backgroundTint="#7E7680" android:layout_marginBottom="16dp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="56dp" android:text="KELUAR AKUN" android:backgroundTint="#121212" android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

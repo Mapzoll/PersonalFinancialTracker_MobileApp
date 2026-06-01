@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Financial Tracker</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="balance_format" translatable="false">Rp %s</string>
+    <string name="zero_balance" translatable="false">Rp 0</string>
+
+    <string name="label_total_balance">Total Balance</string>
+    <string name="label_income">Income</string>
+    <string name="label_expense">Expense</string>
+    <string name="label_recent_transactions">Recent Transactions</string>
+    <string name="action_see_all">See All</string>
+    <string name="action_transfer">Transfer</string>
+    <string name="label_history">History</string>
+
+    <string name="title_register">Create Account</string>
+    <string name="hint_security_pin">6-Digit Security PIN</string>
+    <string name="btn_register_now">Register Now</string>
+    <string name="text_already_have_account">Already have an account? Login</string>
+
+    <string name="title_daftar_akun">CREATE ACCOUNT</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_daftar_sekarang">REGISTER NOW</string>
+    <string name="teks_sudah_punya_akun">Already have an account? Login</string>
+</resources>

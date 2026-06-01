@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "908276219957",
+    "firebase_url": "https://projectmap-dbf47-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "projectmap-dbf47",
+    "storage_bucket": "projectmap-dbf47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908276219957:android:c4930e2b755479a991b17c",
+        "android_client_info": {
+          "package_name": "com.example.projectmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908276219957-2e5hef8iuqje59iinmi05qmp2o6u8v21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiDcceFOrrPasw4atUjKtlu5aKddYfKUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908276219957-2e5hef8iuqje59iinmi05qmp2o6u8v21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
