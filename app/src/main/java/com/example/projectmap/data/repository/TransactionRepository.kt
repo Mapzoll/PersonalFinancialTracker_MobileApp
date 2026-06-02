@@ -23,10 +23,7 @@ class TransactionRepository(
     val allTransactions: Flow<List<TransactionEntity>> = transactionDao.getAllTransactions(userId)
 
     suspend fun addTransaction(transaction: TransactionEntity) {
-        // 1. Save to Local Room first
         transactionDao.insertTransaction(transaction)
-        
-        // 2. Sync to Firebase if not in demo mode
         if (!isDemoMode) {
             syncToFirebase(transaction)
         }
@@ -45,11 +42,10 @@ class TransactionRepository(
             val updatedTransaction = transaction.copy(firebaseId = firebaseId, isSynced = true)
             
             ref.setValue(updatedTransaction).await()
-            
-            // Update local Room with firebaseId and sync status
+
             transactionDao.updateTransaction(updatedTransaction)
         } catch (e: Exception) {
-            // Keep as unsynced in Room
+
             e.printStackTrace()
         }
     }
@@ -62,7 +58,6 @@ class TransactionRepository(
         }
     }
 
-    // Initial fetch from Firebase to populate local Room
     fun fetchFromFirebase() {
         if (isDemoMode || database == null) return
         database.get().addOnSuccessListener { snapshot ->

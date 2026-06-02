@@ -12,7 +12,6 @@ class AuthViewModel : ViewModel() {
 
     private val auth = FirebaseAuth.getInstance()
     private val db = FirebaseFirestore.getInstance()
-
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
@@ -38,11 +37,22 @@ class AuthViewModel : ViewModel() {
 
                         user.updateProfile(profileUpdates).addOnCompleteListener { profileTask ->
                             if (profileTask.isSuccessful) {
-                                val userData = hashMapOf("security_pin" to pin)
+
+                                val userData = hashMapOf(
+                                    "email" to email,
+                                    "name" to name,
+                                    "security_pin" to pin
+                                )
+
                                 db.collection("users").document(user.uid).set(userData)
-                                auth.signOut()
-                                _isLoading.value = false
-                                onSuccess()
+                                    .addOnSuccessListener {
+                                        _isLoading.value = false
+                                        onSuccess()
+                                    }
+                                    .addOnFailureListener { e ->
+                                        _isLoading.value = false
+                                        onError("Gagal menyimpan data database: ${e.message}")
+                                    }
 
                             } else {
                                 _isLoading.value = false
@@ -126,6 +136,10 @@ class AuthViewModel : ViewModel() {
                 _isLoading.value = false
                 onError(e.message ?: "Gagal memperbarui PIN")
             }
+    }
+
+    fun isUserLoggedIn(): Boolean {
+        return auth.currentUser != null
     }
 
     fun logout(onSuccess: () -> Unit) {

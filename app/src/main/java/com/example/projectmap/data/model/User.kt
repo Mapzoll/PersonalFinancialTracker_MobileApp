@@ -7,5 +7,5 @@ data class User(
     val userId: String = "",
     val username: String = "",
     val email: String = "",
-    val securityPin: String = "" // Should be hashed in production
+    val securityPin: String = ""
 )
