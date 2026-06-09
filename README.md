@@ -16,7 +16,7 @@ Personal Financial Tracker is a modern Android mobile application built with **J
 
 ### Key Highlights:
 -  Modern UI built with Jetpack Compose
--  Secure authentication with Firebase & Biometric support
+-  Secure authentication with Firebase & 6-PIN Authentication
 -  Real-time cloud sync with Firebase
 -  Camera integration for receipt capture
 - 📍 Location-based expense tracking
@@ -25,7 +25,7 @@ Personal Financial Tracker is a modern Android mobile application built with **J
 
 ## Features
 
-- ✅ User Authentication (Firebase Auth + 6-PIN)
+- ✅ User Authentication (Firebase Auth + 6-PIN Authentication)
 - ✅ Track Income & Expenses
 - ✅ Categorize Transactions
 - ✅ View Financial Analytics
@@ -152,7 +152,7 @@ cd PersonalFinancialTracker_MobileApp
 # Clean build
 ./gradlew clean
 ```
-
+---
 
 ## Dependencies used
 
@@ -176,7 +176,7 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics")
 }
 ```
-
+---
 
 ## Build Plugins
 
@@ -193,6 +193,8 @@ plugins {
 }
 ```
 
+---
+
 **Plugin Details:**
 - **android.application** - Android app development
 - **kotlin.compose** - Jetpack Compose support for Kotlin
@@ -201,6 +203,7 @@ plugins {
 - **com.google.gms.google-services** - Google Services (Firebase integration)
 - **com.google.firebase.crashlytics** - Firebase Crash Reporting
 
+---
 
 ## Technology Stack
 
@@ -223,7 +226,7 @@ plugins {
 
 ### Authentication & Security
 - Firebase Authentication
-- Biometric authentication (fingerprint)
+- 6-PIN Authentication
 
 ### Media & Location
 - Camera API (Core, Camera2, Lifecycle, View)
@@ -235,17 +238,13 @@ plugins {
 - Coroutines (async operations)
 - Navigation Fragment/UI
 
-### Testing
-- JUnit
-- AndroidX Test
-- Espresso
-- Compose UI Test
 
 ### Build & Code Generation
 - KSP (Kotlin Symbol Processing)
 - Room Compiler
 - Moshi Kotlin Codegen
 
+---
 
 ## Minimum Requirements
 
@@ -254,6 +253,7 @@ plugins {
 - **Java Compatibility**: JDK 11+
 - **Test Runner**: AndroidJUnitRunner
 
+---
 
 ## License
 
