@@ -17,13 +17,13 @@
 Personal Financial Tracker is a modern Android mobile application built with **Jetpack Compose** and **Kotlin**. This app helps users manage their personal finances efficiently by tracking income and expenses in real-time. With Firebase integration for cloud synchronization, users can securely manage their financial data with 6-digit PIN authentication.
 
 ### Key Highlights:
-- 📱 Modern UI built with Jetpack Compose
-- 🔐 Secure authentication with 6-digit PIN
-- 💾 Real-time cloud sync with Firebase
-- 📸 Camera integration for receipt capture
-- 📍 Location-based expense tracking
-- 📊 Comprehensive financial analytics
-- 🔔 Crash reporting for app stability
+- Modern UI built with Jetpack Compose
+- Secure authentication with 6-digit PIN
+- Real-time cloud sync with Firebase
+- Camera integration for receipt capture
+- Location-based expense tracking
+- Comprehensive financial analytics
+- Crash reporting for app stability
 
 ---
 
