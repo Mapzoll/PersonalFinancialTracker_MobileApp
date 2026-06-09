@@ -4,8 +4,8 @@
 
 **Please do not disclose security vulnerabilities through public GitHub issues.**
 
-If you discover a security vulnerability in the Personal Financial Tracker Mobile App, please report it by emailing [security contact - to be updated]. Please include:
-
+**If you discover a security vulnerability in the Personal Financial Tracker Mobile App, please report it by emailing ian25pratama@gmail.com. 
+Please include:**
 1. Description of the vulnerability
 2. Steps to reproduce the issue
 3. Impact assessment
@@ -50,7 +50,7 @@ The app requests only necessary permissions:
 
 - No hardcoded secrets or API keys in the repository
 - Sensitive configuration stored in secure Firebase console
-- Code reviews mandatory for all pull requests
+- Code reviews are mandatory for all pull requests
 - Regular security audits of critical components
 
 ## Best Practices for Users
@@ -89,6 +89,6 @@ We regularly audit third-party dependencies for security vulnerabilities. See `C
 
 ## Contact
 
-For security concerns, contact: [security contact - to be updated]
+For security concerns, contact: [email: ian25pratama@gmail.com]
 
 **Last Updated**: 2026-06-09
