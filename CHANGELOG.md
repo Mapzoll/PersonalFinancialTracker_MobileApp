@@ -9,10 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial project setup with Jetpack Compose UI framework
-- Firebase authentication with email/password support
-- Biometric authentication (fingerprint login)
+- Firebase authentication with 6-digit PIN support
 - Firestore Cloud Database integration
-- Room Local Database for offline support
 - Income and expense tracking functionality
 - Transaction categorization
 - Receipt photo capture using Camera API
@@ -43,9 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - N/A (First Release)
 
 ### Security
-- Firebase Authentication for secure user login
-- Biometric authentication for sensitive operations
+- Firebase Authentication with 6-digit PIN for secure user login
 - Firebase Crashlytics for error monitoring
+- All data encrypted in transit over HTTPS
 
 ---
 
@@ -99,6 +97,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 - All dates follow the format YYYY-MM-DD
 - For questions about specific releases, please open an issue on GitHub
 - For security vulnerabilities, please refer to [SECURITY.md](SECURITY.md)
+- **Important**: This is an online-only application that requires internet connection
 
 ---
 
