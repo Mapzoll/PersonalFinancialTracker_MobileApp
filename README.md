@@ -1,35 +1,31 @@
 # Personal Financial Tracker Mobile App
 
 ## Table of Contents
-- [About](#about)
-- [Features](#features)
-- [Installation](#installation)
-- [Requirements](#requirements)
-- [Building the Project](#building-the-project)
-- [Dependencies](#dependencies)
-- [Build Plugins](#build-plugins)
-- [Technology Stack](#technology-stack)
-
----
+1 [About](#about)
+2 [Features](#features)
+3 [Installation](#installation)
+4 [Requirements](#requirements)
+5 [Building the Project](#building-the-project)
+6 [Dependencies](#dependencies)
+7 [Build Plugins](#build-plugins)
+8 [Technology Stack](#technology-stack)
 
 ## About
 
 Personal Financial Tracker is a modern Android mobile application built with **Jetpack Compose** and **Kotlin**. This app helps users manage their personal finances efficiently by tracking income, expenses, and financial goals. With Firebase integration for cloud synchronization and Room Database for local storage, users can securely manage their financial data across multiple devices.
 
 ### Key Highlights:
-- 📱 Modern UI built with Jetpack Compose
-- 🔐 Secure authentication with Firebase & Biometric support
-- 💾 Real-time cloud sync with Firebase
-- 📸 Camera integration for receipt capture
+-  Modern UI built with Jetpack Compose
+-  Secure authentication with Firebase & Biometric support
+-  Real-time cloud sync with Firebase
+-  Camera integration for receipt capture
 - 📍 Location-based expense tracking
 - 📊 Comprehensive financial analytics
 - 🔔 Crash reporting for app stability
 
----
-
 ## Features
 
-- ✅ User Authentication (Firebase Auth + Biometric)
+- ✅ User Authentication (Firebase Auth + 6-PIN)
 - ✅ Track Income & Expenses
 - ✅ Categorize Transactions
 - ✅ View Financial Analytics
@@ -39,7 +35,6 @@ Personal Financial Tracker is a modern Android mobile application built with **J
 - ✅ Local Database Caching
 - ✅ Real-time Notifications
 
----
 
 ## Installation
 
@@ -83,7 +78,7 @@ cd PersonalFinancialTracker_MobileApp
 # 6. Build the project
 # Build → Make Project (Ctrl+F9 / Cmd+F9)
 
-# 7. Run on emulator or device
+# 7. Run on the emulator or device
 # Run → Run 'app' (Shift+F10 / Ctrl+R)
 ```
 
@@ -130,9 +125,6 @@ cd PersonalFinancialTracker_MobileApp
   - Camera
   - Location
   - Storage
-  - Biometric
-
----
 
 ## Building the Project
 
@@ -143,7 +135,7 @@ cd PersonalFinancialTracker_MobileApp
 3. Navigate to the project folder
 4. Wait for Gradle sync to complete
 5. Click "Build" → "Make Project"
-6. Run on emulator or connected device
+6. Run on an emulator or a connected device
 
 ### Using Command Line
 
@@ -161,7 +153,6 @@ cd PersonalFinancialTracker_MobileApp
 ./gradlew clean
 ```
 
----
 
 ## Dependencies used
 
@@ -186,7 +177,6 @@ dependencies {
 }
 ```
 
----
 
 ## Build Plugins
 
@@ -211,7 +201,6 @@ plugins {
 - **com.google.gms.google-services** - Google Services (Firebase integration)
 - **com.google.firebase.crashlytics** - Firebase Crash Reporting
 
----
 
 ## Technology Stack
 
@@ -257,7 +246,6 @@ plugins {
 - Room Compiler
 - Moshi Kotlin Codegen
 
----
 
 ## Minimum Requirements
 
@@ -266,7 +254,6 @@ plugins {
 - **Java Compatibility**: JDK 11+
 - **Test Runner**: AndroidJUnitRunner
 
----
 
 ## License
 
