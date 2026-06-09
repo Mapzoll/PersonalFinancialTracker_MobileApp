@@ -4,8 +4,8 @@
 
 **Please do not disclose security vulnerabilities through public GitHub issues.**
 
-**If you discover a security vulnerability in the Personal Financial Tracker Mobile App, please report it by emailing ian25pratama@gmail.com. 
-Please include:**
+If you discover a security vulnerability in the Personal Financial Tracker Mobile App, please report it by emailing ian25pratama@gmail.com. Please include:
+
 1. Description of the vulnerability
 2. Steps to reproduce the issue
 3. Impact assessment
@@ -19,23 +19,23 @@ We will acknowledge your report within 48 hours and provide an estimated timelin
 
 - All user credentials are handled through Firebase Authentication
 - Passwords are never stored locally
-- Biometric authentication uses Android's BiometricPrompt API
+- 6-digit PIN authentication combined with Firebase Authentication
 - Sessions are managed securely with proper token expiration
+- Internet connection required for all authentication operations
 
 ### Data Protection
 
 - Sensitive data (financial information) is encrypted both in transit and at rest
 - Firebase Firestore enforces security rules for data access
-- Local database (Room) can be encrypted using SQLCipher
 - All network requests use HTTPS
+- No local storage of sensitive financial data
 
 ### Permissions
 
 The app requests only necessary permissions:
 - `CAMERA` - For receipt capture
 - `ACCESS_FINE_LOCATION` - For location-based tracking
-- `READ_EXTERNAL_STORAGE` / `WRITE_EXTERNAL_STORAGE` - For file access
-- `USE_BIOMETRIC` - For biometric authentication
+- `READ_EXTERNAL_STORAGE` / `WRITE_EXTERNAL_STORAGE` - For image caching
 
 ### Dependencies
 
@@ -57,9 +57,10 @@ The app requests only necessary permissions:
 
 1. **Keep the app updated** - Always use the latest version
 2. **Secure your device** - Use a strong unlock method
-3. **Use biometric authentication** - When available
+3. **Use strong PIN** - Create a secure 6-digit PIN
 4. **Review permissions** - Only grant necessary permissions
 5. **Report issues** - Report any suspicious behavior immediately
+6. **Maintain internet connection** - Application requires active internet
 
 ## Security Updates
 
@@ -89,6 +90,6 @@ We regularly audit third-party dependencies for security vulnerabilities. See `C
 
 ## Contact
 
-For security concerns, contact: [email: ian25pratama@gmail.com]
+For security concerns, contact: ian25pratama@gmail.com
 
 **Last Updated**: 2026-06-09
