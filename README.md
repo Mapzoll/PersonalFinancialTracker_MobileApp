@@ -14,29 +14,29 @@
 
 ## About
 
-Personal Financial Tracker is a modern Android mobile application built with **Jetpack Compose** and **Kotlin**. This app helps users manage their personal finances efficiently by tracking income, expenses, and financial goals. With Firebase integration for cloud synchronization and Room Database for local storage, users can securely manage their financial data across multiple devices.
+Personal Financial Tracker is a modern Android mobile application built with **Jetpack Compose** and **Kotlin**. This app helps users manage their personal finances efficiently by tracking income and expenses in real-time. With Firebase integration for cloud synchronization, users can securely manage their financial data with 6-digit PIN authentication.
 
 ### Key Highlights:
--  Modern UI built with Jetpack Compose
--  Secure authentication with Firebase & Biometric support
--  Real-time cloud sync with Firebase
--  Camera integration for receipt capture
--  Location-based expense tracking
--  Comprehensive financial analytics
--  Crash reporting for app stability
+- 📱 Modern UI built with Jetpack Compose
+- 🔐 Secure authentication with 6-digit PIN
+- 💾 Real-time cloud sync with Firebase
+- 📸 Camera integration for receipt capture
+- 📍 Location-based expense tracking
+- 📊 Comprehensive financial analytics
+- 🔔 Crash reporting for app stability
 
 ---
 
 ## Features
 
-- ✅ User Authentication (Firebase Auth + Biometric)
+- ✅ User Authentication (Firebase Auth + 6-Digit PIN)
 - ✅ Track Income & Expenses
 - ✅ Categorize Transactions
 - ✅ View Financial Analytics
 - ✅ Capture Receipt Photos
 - ✅ Location-based Expense Tracking
-- ✅ Cloud Backup & Sync
-- ✅ Local Database Caching
+- ✅ Real-time Cloud Sync
+- ✅ Expense Reports & Insights
 - ✅ Real-time Notifications
 
 ---
@@ -97,7 +97,6 @@ cd PersonalFinancialTracker_MobileApp
 6. Enable required Firebase services:
    - Authentication
    - Firestore Database
-   - Realtime Database
    - Crashlytics
 
 ---
@@ -126,11 +125,11 @@ cd PersonalFinancialTracker_MobileApp
 - **Android Version**: 7.0 (API 24) or higher
 - **RAM**: 2 GB minimum
 - **Storage**: 100 MB free space
+- **Internet**: Required for all features (cloud-based application)
 - **Permissions Required**:
-  - Camera
-  - Location
-  - Storage
-  - Biometric
+  - Camera (for receipt capture)
+  - Location (for expense tracking)
+  - Storage (for image caching)
 
 ---
 
@@ -232,10 +231,6 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-crashlytics")
-    
-    // Firebase Realtime Database
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.database)
 }
 ```
 
@@ -243,10 +238,6 @@ dependencies {
 
 ```kotlin
 dependencies {
-    // Room Database
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    
     // DataStore Preferences
     implementation(libs.androidx.datastore.preferences)
 }
@@ -306,13 +297,10 @@ dependencies {
 }
 ```
 
-### 8. Security & Biometric Dependencies
+### 8. Security Dependencies
 
 ```kotlin
 dependencies {
-    // Biometric Authentication
-    implementation(libs.androidx.biometric)
-    
     // Dependency Injection
     implementation("javax.inject:javax.inject:1")
     
@@ -401,9 +389,7 @@ plugins {
 - Material Icons
 
 ### Database & Storage
-- Room Database (Local data persistence)
 - Firebase Firestore (Cloud database)
-- Firebase Realtime Database
 - DataStore Preferences
 
 ### Networking
@@ -414,7 +400,7 @@ plugins {
 
 ### Authentication & Security
 - Firebase Authentication
-- Biometric authentication (fingerprint)
+- 6-Digit PIN Authentication
 - Dependency Injection (javax.inject)
 
 ### Media & Location
@@ -443,12 +429,23 @@ plugins {
 
 ---
 
+## Important Notes
+
+### Internet Requirement
+This application requires an active internet connection for all features as it is a cloud-based application. All financial data is stored in Firebase Firestore and cannot be accessed offline.
+
+### Authentication
+The app uses a 6-digit PIN authentication method combined with Firebase Authentication for secure user access.
+
+---
+
 ## Minimum Requirements
 
 - **Minimum SDK**: 24 (Android 7.0)
 - **Target SDK**: 37 (Android 13)
 - **Java Compatibility**: JDK 11+
 - **Test Runner**: AndroidJUnitRunner
+- **Internet Connection**: Required
 
 ---
 
