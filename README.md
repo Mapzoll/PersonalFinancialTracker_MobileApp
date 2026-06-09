@@ -1,30 +1,35 @@
 # Personal Financial Tracker Mobile App
 
 ## Table of Contents
-1.  [About](#about)
-2.  [Features](#features)
-3.  [Installation](#installation)
-4.  [Requirements](#requirements)
-5.  [Building the Project](#building-the-project)
-6.  [Dependencies](#dependencies)
-7.  [Build Plugins](#build-plugins)
-8.  [Technology Stack](#technology-stack)
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Requirements](#requirements)
+- [Building the Project](#building-the-project)
+- [Dependencies](#dependencies)
+- [Build Plugins](#build-plugins)
+- [Technology Stack](#technology-stack)
+
+---
 
 ## About
 
 Personal Financial Tracker is a modern Android mobile application built with **Jetpack Compose** and **Kotlin**. This app helps users manage their personal finances efficiently by tracking income, expenses, and financial goals. With Firebase integration for cloud synchronization and Room Database for local storage, users can securely manage their financial data across multiple devices.
 
 ### Key Highlights:
-- Modern UI built with Jetpack Compose
-- Secure authentication with Firebase & 6-PIN Authentication
-- Real-time cloud sync with Firebase
-- Camera integration for receipt capture
-- Comprehensive financial analytics
-- Crash reporting for app stability
+- 📱 Modern UI built with Jetpack Compose
+- 🔐 Secure authentication with Firebase & Biometric support
+- 💾 Real-time cloud sync with Firebase
+- 📸 Camera integration for receipt capture
+- 📍 Location-based expense tracking
+- 📊 Comprehensive financial analytics
+- 🔔 Crash reporting for app stability
+
+---
 
 ## Features
 
-- ✅ User Authentication (Firebase Auth + 6-PIN Authentication)
+- ✅ User Authentication (Firebase Auth + Biometric)
 - ✅ Track Income & Expenses
 - ✅ Categorize Transactions
 - ✅ View Financial Analytics
@@ -34,6 +39,7 @@ Personal Financial Tracker is a modern Android mobile application built with **J
 - ✅ Local Database Caching
 - ✅ Real-time Notifications
 
+---
 
 ## Installation
 
@@ -77,7 +83,7 @@ cd PersonalFinancialTracker_MobileApp
 # 6. Build the project
 # Build → Make Project (Ctrl+F9 / Cmd+F9)
 
-# 7. Run on the emulator or device
+# 7. Run on emulator or device
 # Run → Run 'app' (Shift+F10 / Ctrl+R)
 ```
 
@@ -124,6 +130,9 @@ cd PersonalFinancialTracker_MobileApp
   - Camera
   - Location
   - Storage
+  - Biometric
+
+---
 
 ## Building the Project
 
@@ -134,7 +143,7 @@ cd PersonalFinancialTracker_MobileApp
 3. Navigate to the project folder
 4. Wait for Gradle sync to complete
 5. Click "Build" → "Make Project"
-6. Run on an emulator or a connected device
+6. Run on emulator or connected device
 
 ### Using Command Line
 
@@ -151,30 +160,209 @@ cd PersonalFinancialTracker_MobileApp
 # Clean build
 ./gradlew clean
 ```
+
 ---
 
 ## Dependencies used
 
-### 1. RecyclerView
+All dependencies are managed through version catalogs in `gradle/libs.versions.toml` and direct implementations in `app/build.gradle.kts`.
+
+### 1. UI & Compose Dependencies
 
 ```kotlin
 dependencies {
-    implementation("androidx.recyclerview:recyclerview:1.4.0")
-    implementation("androidx.recyclerview:recyclerview-selection:1.2.0")
+    // Jetpack Compose Core
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    
+    // Compose Icons
+    implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.androidx.compose.material.icons.extended)
+    
+    // Compose Adaptive
+    implementation(libs.androidx.compose.adaptive)
+    implementation(libs.androidx.compose.adaptive.layout)
+    implementation(libs.androidx.compose.adaptive.navigation3)
+    
+    // Activity & Compose Integration
+    implementation(libs.androidx.activity.compose)
+    
+    // Material Design
+    implementation(libs.material)
+    
+    // ConstraintLayout
+    implementation(libs.androidx.constraintlayout)
+    
+    // Accompanist (Permissions & more)
+    implementation(libs.accompanist.permissions)
 }
 ```
 
-### 2. Firebase
+### 2. Navigation Dependencies
 
 ```kotlin
 dependencies {
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.database)
+    // Navigation Compose
+    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.navigation3.ui)
+    
+    // Navigation Fragment & UI
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    
+    // ViewModel Navigation
+    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
+}
+```
+
+### 3. Firebase Dependencies
+
+```kotlin
+dependencies {
+    // Firebase BOM for version management
+    implementation(platform("com.google.firebase:firebase-bom:34.13.0"))
+    implementation(platform(libs.firebase.bom))
+    
+    // Firebase Core Services
+    implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-crashlytics")
+    
+    // Firebase Realtime Database
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.database)
 }
 ```
+
+### 4. Database & Storage Dependencies
+
+```kotlin
+dependencies {
+    // Room Database
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    
+    // DataStore Preferences
+    implementation(libs.androidx.datastore.preferences)
+}
+```
+
+### 5. Networking Dependencies
+
+```kotlin
+dependencies {
+    // Retrofit
+    implementation(libs.retrofit)
+    
+    // OkHttp
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    
+    // Moshi (JSON Serialization)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.converter.moshi)
+}
+```
+
+### 6. Lifecycle & Coroutines Dependencies
+
+```kotlin
+dependencies {
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    
+    // Serialization
+    implementation(libs.kotlinx.serialization.core)
+}
+```
+
+### 7. Camera & Media Dependencies
+
+```kotlin
+dependencies {
+    // Camera
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
+    
+    // Image Loading
+    implementation(libs.coil.compose)
+    
+    // Location Services
+    implementation(libs.play.services.location)
+}
+```
+
+### 8. Security & Biometric Dependencies
+
+```kotlin
+dependencies {
+    // Biometric Authentication
+    implementation(libs.androidx.biometric)
+    
+    // Dependency Injection
+    implementation("javax.inject:javax.inject:1")
+    
+    // Core KTX
+    implementation(libs.androidx.core.ktx)
+}
+```
+
+### 9. RecyclerView Dependencies
+
+```kotlin
+dependencies {
+    // RecyclerView
+    implementation(libs.androidx.recyclerview)
+}
+```
+
+### 10. Testing Dependencies
+
+```kotlin
+dependencies {
+    // Unit Testing
+    testImplementation(libs.junit)
+    testImplementation(libs.androidx.junit)
+    testImplementation(libs.androidx.core)
+    testImplementation(libs.kotlinx.coroutines.test)
+    
+    // Android Testing
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.runner)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    
+    // Debug Testing
+    debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+}
+```
+
+### 11. Build & Compilation Dependencies
+
+```kotlin
+dependencies {
+    // KSP - Kotlin Symbol Processing
+    "ksp"(libs.androidx.room.compiler)
+    "ksp"(libs.moshi.kotlin.codegen)
+}
+```
+
 ---
 
 ## Build Plugins
@@ -191,8 +379,6 @@ plugins {
     id("com.google.firebase.crashlytics") version "3.0.2"
 }
 ```
-
----
 
 **Plugin Details:**
 - **android.application** - Android app development
@@ -211,6 +397,8 @@ plugins {
 - Material Design 3
 - Compose Navigation
 - Accompanist Permissions
+- ConstraintLayout
+- Material Icons
 
 ### Database & Storage
 - Room Database (Local data persistence)
@@ -222,10 +410,12 @@ plugins {
 - Retrofit (HTTP client)
 - OkHttp (HTTP interceptor)
 - Moshi (JSON serialization)
+- Logging Interceptor
 
 ### Authentication & Security
 - Firebase Authentication
-- 6-PIN Authentication
+- Biometric authentication (fingerprint)
+- Dependency Injection (javax.inject)
 
 ### Media & Location
 - Camera API (Core, Camera2, Lifecycle, View)
@@ -234,9 +424,17 @@ plugins {
 
 ### Architecture & State Management
 - Lifecycle ViewModel
-- Coroutines (async operations)
-- Navigation Fragment/UI
+- Coroutines (Core & Android)
+- Navigation (Compose, Fragment, UI)
+- Kotlin Serialization
+- Core KTX
 
+### Testing
+- JUnit
+- AndroidX Test (Core, JUnit)
+- Espresso
+- Compose UI Test
+- Coroutines Test
 
 ### Build & Code Generation
 - KSP (Kotlin Symbol Processing)
