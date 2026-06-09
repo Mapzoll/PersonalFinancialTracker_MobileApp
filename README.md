@@ -1,14 +1,14 @@
 # Personal Financial Tracker Mobile App
 
 ## Table of Contents
-1 [About](#about)
-2 [Features](#features)
-3 [Installation](#installation)
-4 [Requirements](#requirements)
-5 [Building the Project](#building-the-project)
-6 [Dependencies](#dependencies)
-7 [Build Plugins](#build-plugins)
-8 [Technology Stack](#technology-stack)
+1.  [About](#about)
+2.  [Features](#features)
+3.  [Installation](#installation)
+4.  [Requirements](#requirements)
+5.  [Building the Project](#building-the-project)
+6.  [Dependencies](#dependencies)
+7.  [Build Plugins](#build-plugins)
+8.  [Technology Stack](#technology-stack)
 
 ## About
 
