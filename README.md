@@ -1,3 +1,168 @@
+# Personal Financial Tracker Mobile App
+
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Requirements](#requirements)
+- [Building the Project](#building-the-project)
+- [Dependencies](#dependencies)
+- [Build Plugins](#build-plugins)
+- [Technology Stack](#technology-stack)
+
+---
+
+## About
+
+Personal Financial Tracker is a modern Android mobile application built with **Jetpack Compose** and **Kotlin**. This app helps users manage their personal finances efficiently by tracking income, expenses, and financial goals. With Firebase integration for cloud synchronization and Room Database for local storage, users can securely manage their financial data across multiple devices.
+
+### Key Highlights:
+- 📱 Modern UI built with Jetpack Compose
+- 🔐 Secure authentication with Firebase & Biometric support
+- 💾 Real-time cloud sync with Firebase
+- 📸 Camera integration for receipt capture
+- 📍 Location-based expense tracking
+- 📊 Comprehensive financial analytics
+- 🔔 Crash reporting for app stability
+
+---
+
+## Features
+
+- ✅ User Authentication (Firebase Auth + Biometric)
+- ✅ Track Income & Expenses
+- ✅ Categorize Transactions
+- ✅ View Financial Analytics
+- ✅ Capture Receipt Photos
+- ✅ Location-based Expense Tracking
+- ✅ Cloud Backup & Sync
+- ✅ Local Database Caching
+- ✅ Real-time Notifications
+
+---
+
+## Installation
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+1. **Android Studio** (Latest version)
+   - Download from: https://developer.android.com/studio
+   
+2. **JDK 11 or Higher**
+   - Download from: https://www.oracle.com/java/technologies/downloads/
+   
+3. **Android SDK**
+   - Minimum SDK: Android 7.0 (API 24)
+   - Target SDK: Android 13 (API 37)
+   - Install via Android Studio's SDK Manager
+
+4. **Git**
+   - Download from: https://git-scm.com/
+
+### Steps to Install
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Mapzoll/PersonalFinancialTracker_MobileApp.git
+
+# 2. Navigate to the project directory
+cd PersonalFinancialTracker_MobileApp
+
+# 3. Open the project in Android Studio
+# File → Open → Select the project folder
+
+# 4. Sync Gradle files
+# Android Studio will automatically sync dependencies
+
+# 5. Configure Firebase
+# - Add your google-services.json file to the app/ directory
+# - Download from Firebase Console: https://console.firebase.google.com/
+
+# 6. Build the project
+# Build → Make Project (Ctrl+F9 / Cmd+F9)
+
+# 7. Run on emulator or device
+# Run → Run 'app' (Shift+F10 / Ctrl+R)
+```
+
+### Firebase Setup
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Add Android app to your Firebase project
+4. Download `google-services.json`
+5. Place it in the `app/` directory
+6. Enable required Firebase services:
+   - Authentication
+   - Firestore Database
+   - Realtime Database
+   - Crashlytics
+
+---
+
+## Requirements
+
+### System Requirements
+
+- **Operating System**: Windows, macOS, or Linux
+- **RAM**: 8 GB minimum (16 GB recommended)
+- **Disk Space**: 10 GB for Android Studio + SDK
+
+### Software Requirements
+
+| Component | Version |
+|-----------|---------|
+| Android Studio | Latest (2024.x) |
+| JDK | 11 or higher |
+| Gradle | 8.0+ (auto-managed) |
+| Kotlin | 1.9+ (auto-managed) |
+| Android SDK | 37 (Target) |
+| Minimum Android | 7.0 (API 24) |
+
+### Device Requirements
+
+- **Android Version**: 7.0 (API 24) or higher
+- **RAM**: 2 GB minimum
+- **Storage**: 100 MB free space
+- **Permissions Required**:
+  - Camera
+  - Location
+  - Storage
+  - Biometric
+
+---
+
+## Building the Project
+
+### Using Android Studio
+
+1. Open Android Studio
+2. Select "File" → "Open"
+3. Navigate to the project folder
+4. Wait for Gradle sync to complete
+5. Click "Build" → "Make Project"
+6. Run on emulator or connected device
+
+### Using Command Line
+
+```bash
+# Build debug APK
+./gradlew assembleDebug
+
+# Build release APK
+./gradlew assembleRelease
+
+# Run tests
+./gradlew test
+
+# Clean build
+./gradlew clean
+```
+
+---
+
 ## Dependencies used
 
 ### 1. RecyclerView
@@ -100,3 +265,13 @@ plugins {
 - **Target SDK**: 37 (Android 13)
 - **Java Compatibility**: JDK 11+
 - **Test Runner**: AndroidJUnitRunner
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please open an issue on the [GitHub repository](https://github.com/Mapzoll/PersonalFinancialTracker_MobileApp).
