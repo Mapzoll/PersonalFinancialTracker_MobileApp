@@ -83,7 +83,7 @@ cd PersonalFinancialTracker_MobileApp
 # 6. Build the project
 # Build → Make Project (Ctrl+F9 / Cmd+F9)
 
-# 7. Run on emulator or device
+# 7. Run on the emulator or device
 # Run → Run 'app' (Shift+F10 / Ctrl+R)
 ```
 
@@ -92,7 +92,7 @@ cd PersonalFinancialTracker_MobileApp
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Create a new project
 3. Add Android app to your Firebase project
-4. Download `google-services.json`
+4. Download `google-services.json.`
 5. Place it in the `app/` directory
 6. Enable required Firebase services:
    - Authentication
