@@ -47,7 +47,7 @@ Personal Financial Tracker is a modern Android mobile application built with **J
 
 Before you begin, ensure you have the following installed:
 
-1. **Android Studio** (Latest version)
+1. **Android Studio** ( Android Studio Panda 4 | 2025.3.4 Patch 1)
    - Download from: https://developer.android.com/studio
    
 2. **JDK 11 or Higher**
@@ -456,3 +456,5 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or support, please open an issue on the [GitHub repository](https://github.com/Mapzoll/PersonalFinancialTracker_MobileApp).
+
+-- 2026
