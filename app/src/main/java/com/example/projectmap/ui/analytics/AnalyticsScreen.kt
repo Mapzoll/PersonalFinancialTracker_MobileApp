@@ -146,7 +146,7 @@ fun AnalyticsScreen(
                         }
                     }
                     Spacer(modifier = Modifier.height(12.dp))
-                    Text("ANALITIK DATA", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onBackground)
+                    Text("Dashboard Summary ", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onBackground)
                 }
 
                 Box(modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface, RoundedCornerShape(12.dp)).border(3.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(12.dp)).shadow(6.dp, RoundedCornerShape(12.dp), clip = false).padding(20.dp)) {
@@ -214,7 +214,7 @@ fun AnalyticsScreen(
                 }
                 Spacer(modifier = Modifier.height(24.dp))
 
-                Text("METRIK KUNCI", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground, modifier = Modifier.padding(bottom = 12.dp))
+                Text("KEY METRIX", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground, modifier = Modifier.padding(bottom = 12.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                     Box(modifier = Modifier.weight(1f).background(MaterialTheme.colorScheme.secondary, RoundedCornerShape(8.dp)).border(3.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(8.dp)).padding(16.dp)) {
                         Column {
